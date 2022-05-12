@@ -22,6 +22,6 @@ Route::post('/change-lang', function (Request $request) {
 $tr = new GoogleTranslate();
 $tr->setSource('en'); // Translate from English
 $tr->setSource(); // Detect language automatically
-$tr->setTarget($request->lang_select); // Translate to Georgian
+$tr->setTarget($request->lang_select); // Translate to Selected Language
 echo $tr->translate($request->data);
 })->name('change-lang');
